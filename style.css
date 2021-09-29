@@ -1,0 +1,36 @@
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; /* Normally, 100% font size is 16px, we want 10px, so use 62.5% */
+}
+
+.parent {
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.child {
+  width: 20%; /* percent of parent size that is taken up */
+}
+
+.child-1 {
+  border: 3px solid green;
+  height: 300px;
+}
+
+.child-2 {
+  border: 3px solid yellow;
+  height: 500px;
+  flex-grow: 1;
+}
+
+.child-3 {
+  border: 3px solid green;
+  height: 600px;
+  flex-grow: 3;
+}
