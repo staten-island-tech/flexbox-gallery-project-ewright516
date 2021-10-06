@@ -22,6 +22,40 @@ h1 {
   font-size: 10rem;
 }
 
+.animation {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+}
+
+@keyframes test {
+  0% {
+    left: 50%;
+    bottom: 10%;
+    background-color: red;
+  }
+  25% {
+    left: 50%;
+    bottom: 20%;
+    background-color: blue;
+  }
+  50% {
+    left: 55%;
+    bottom: 20%;
+    background-color: green;
+  }
+  75% {
+    left: 55%;
+    bottom: 10%;
+    background-color: yellow;
+  }
+  100% {
+    left: 50%;
+    bottom: 10%;
+    background-color: purple;
+  }
+}
+
 .about {
   display: flex;
   flex-direction: column;
@@ -52,11 +86,12 @@ h1 {
 .about-image {
   width: 100%;
   background-color: rgba(255, 255, 255, 0);
+  transition: all 0.3s;
 }
 
 .about-image:hover {
   width: 110%;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, -5%);
+  transform: translate(-5%, -5%);
+  filter: invert(50%);
 }
