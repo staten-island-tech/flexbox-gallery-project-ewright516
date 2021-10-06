@@ -6,7 +6,7 @@ body,
   box-sizing: border-box;
   font-size: 62.5%; /* Normally, 100% font size is 16px, we want 10px, so use 62.5% */
   font-family: "Lato", sans-serif;
-  background-color: #ffa000;
+  background-color: #2a9d8f;
 }
 
 header {
@@ -15,6 +15,7 @@ header {
   margin: 3rem auto;
   font-size: 7rem;
   text-align: center;
+  color: #ffba08;
 }
 
 h1 {
@@ -41,12 +42,21 @@ h1 {
 
 .about-image-box {
   border: 3px solid black;
-  box-shadow: 1rem 1rem 1rem #795548;
+  box-shadow: 2rem 2rem 2rem #1d6960;
   width: 25vw;
   height: 25vw;
+  position: relative;
+  background-color: #fc7a57;
 }
 
 .about-image {
   width: 100%;
-  background-color: #ffecb3;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.about-image:hover {
+  width: 110%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -5%);
 }
