@@ -25,11 +25,19 @@ h1 {
   font-size: 10rem;
 }
 
-.white-pawn-animation {
-  height: 5rem;
-  width: 5rem;
+.pawn-animation {
+  height: 10rem;
+  width: 10rem;
   position: absolute;
   animation: white-pawn 2s infinite;
+}
+
+.white-pawn {
+  animation: white-pawn 2s infinite;
+}
+
+.black-pawn {
+  animation: black-pawn 2s infinite;
 }
 
 @keyframes white-pawn {
@@ -48,42 +56,19 @@ h1 {
 }
 
 @keyframes black-pawn {
-}
-
-/* .animation {
-  height: 2rem;
-  width: 2rem;
-  position: absolute;
-  animation: test 4s infinite;
-}
-
-@keyframes test {
   0% {
-    left: 50%;
-    bottom: 10%;
-    background-color: red;
-  }
-  25% {
-    left: 50%;
-    bottom: 20%;
-    background-color: blue;
+    right: 10%;
+    top: 10%;
   }
   50% {
-    left: 55%;
-    bottom: 20%;
-    background-color: green;
-  }
-  75% {
-    left: 55%;
-    bottom: 10%;
-    background-color: yellow;
+    right: 30%;
+    top: 10%;
   }
   100% {
-    left: 50%;
-    bottom: 10%;
-    background-color: purple;
+    right: 10%;
+    top: 10%;
   }
-} */
+}
 
 .about {
   display: flex;
@@ -105,7 +90,6 @@ h1 {
 
 .about-image {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0);
   transition: all 0.3s;
 }
 
@@ -114,4 +98,21 @@ h1 {
   position: absolute;
   transform: translate(-5%, -5%);
   filter: invert(50%);
+}
+
+.top-middle-pawn {
+  width: 100%;
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.top-middle-pawn:hover {
+  opacity: 0%;
+}
+
+.top-middle-pawn-div:hover {
+  background-image: url(media/chess-king.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 }
