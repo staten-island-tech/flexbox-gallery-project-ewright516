@@ -25,6 +25,14 @@ h1 {
   font-size: 10rem;
 }
 
+.startup-animation {
+  width: 1rem;
+  position: absolute;
+  opacity: 0%;
+  left: 0%;
+  animation: startup-animation 1.5s;
+}
+
 .pawn-animation {
   height: 10rem;
   width: 10rem;
@@ -40,21 +48,52 @@ h1 {
   animation: black-pawn 2s infinite;
 }
 
+@keyframes startup-animation {
+  0% {
+    width: 50vw;
+    opacity: 50%;
+    z-index: 3;
+    left: 25%;
+    top: 10%;
+  }
+  50% {
+    width: 50vw;
+    opacity: 100%;
+    z-index: 3;
+    left: 25%;
+    top: 10%;
+  }
+  75% {
+    width: 50vw;
+    opacity: 50%;
+    z-index: 3;
+    left: 25%;
+    top: 10%;
+  }
+  100% {
+    width: 50vw;
+    opacity: 25%;
+    z-index: 3;
+    left: 25%;
+    top: 10%;
+  }
+}
+
 @keyframes white-pawn {
   0% {
     left: 10%;
     top: 10%;
-    transform: rotate(-0.035turn);
+    transform: rotate(0.035turn);
   }
   50% {
     left: 30%;
     top: 10%;
-    transform: rotate(0.035turn);
+    transform: rotate(-0.035turn);
   }
   100% {
     left: 10%;
     top: 10%;
-    transform: rotate(-0.035turn);
+    transform: rotate(0.035turn);
   }
 }
 
@@ -62,17 +101,17 @@ h1 {
   0% {
     right: 10%;
     top: 10%;
-    transform: rotate(0.035turn);
+    transform: rotate(-0.035turn);
   }
   50% {
     right: 30%;
     top: 10%;
-    transform: rotate(-0.035turn);
+    transform: rotate(0.035turn);
   }
   100% {
     right: 10%;
     top: 10%;
-    transform: rotate(0.035turn);
+    transform: rotate(-0.035turn);
   }
 }
 
@@ -121,4 +160,8 @@ h1 {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
+}
+
+.top-left-pawn:hover {
+  transform: rotate(0.25turn);
 }
