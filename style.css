@@ -44,14 +44,17 @@ h1 {
   0% {
     left: 10%;
     top: 10%;
+    transform: rotate(-0.035turn);
   }
   50% {
     left: 30%;
     top: 10%;
+    transform: rotate(0.035turn);
   }
   100% {
     left: 10%;
     top: 10%;
+    transform: rotate(-0.035turn);
   }
 }
 
@@ -59,14 +62,17 @@ h1 {
   0% {
     right: 10%;
     top: 10%;
+    transform: rotate(0.035turn);
   }
   50% {
     right: 30%;
     top: 10%;
+    transform: rotate(-0.035turn);
   }
   100% {
     right: 10%;
     top: 10%;
+    transform: rotate(0.035turn);
   }
 }
 
@@ -75,8 +81,8 @@ h1 {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 85vw;
   flex-wrap: wrap;
+  height: 85vw;
 }
 
 .about-image-box {
