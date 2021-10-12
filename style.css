@@ -30,7 +30,18 @@ h1 {
   position: absolute;
   opacity: 0%;
   left: 0%;
-  animation: startup-animation 1.5s;
+  animation: startup-animation 3s;
+}
+
+.startup-animation-image {
+  width: 100%;
+}
+
+.startup-animation-text {
+  font-size: 7rem;
+  width: 100%;
+  background-color: #fc7a57;
+  text-align: center;
 }
 
 .pawn-animation {
@@ -156,7 +167,7 @@ h1 {
 }
 
 .top-middle-pawn-div:hover {
-  background-image: url(media/chess-king.png);
+  background-image: url(media/chess-queen.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -164,4 +175,68 @@ h1 {
 
 .top-left-pawn:hover {
   transform: rotate(0.25turn);
+}
+
+.top-right-pawn:hover {
+  animation: top-right-pawn 3s
+}
+
+@keyframes top-right-pawn {
+  0% {
+    width: 100%;
+  }
+  50%; {
+    width: 500%;
+  }
+  100%{
+    width: 1000%;
+  }
+}
+
+.bishop {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.bishop:hover {
+  width: 60%;
+  position: absolute;
+  transform: rotate(-0.25turn);
+  bottom: -10rem;
+  left: 20%;
+  filter: invert(50%);
+}
+
+.bishop-div:hover {
+  background-image: url(media/pope.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-color: white;
+}
+
+.knight {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.knight:hover {
+  filter: invert(50%);
+  animation: knight 3s;
+}
+
+@keyframes knight {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 40%;
+  }
+  100% {
+    width: 1%;
+    margin-left: 49.5%;
+    margin-top: 49.5%;
+  }
 }
