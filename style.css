@@ -62,7 +62,7 @@ h1 {
 @keyframes startup-animation {
   0% {
     width: 50vw;
-    opacity: 50%;
+    opacity: 0%;
     z-index: 3;
     left: 25%;
     top: 10%;
@@ -74,16 +74,9 @@ h1 {
     left: 25%;
     top: 10%;
   }
-  75% {
-    width: 50vw;
-    opacity: 50%;
-    z-index: 3;
-    left: 25%;
-    top: 10%;
-  }
   100% {
     width: 50vw;
-    opacity: 25%;
+    opacity: 0%;
     z-index: 3;
     left: 25%;
     top: 10%;
@@ -138,8 +131,8 @@ h1 {
 .about-image-box {
   border: 3px solid black;
   box-shadow: 2rem 2rem 2rem #1d6960;
-  width: 25vw;
-  height: 25vw;
+  width: 26vw;
+  height: 26vw;
   position: relative;
   background-color: #fc7a57;
 }
@@ -178,18 +171,15 @@ h1 {
 }
 
 .top-right-pawn:hover {
-  animation: top-right-pawn 3s
+  animation: top-right-pawn 3s;
 }
 
 @keyframes top-right-pawn {
   0% {
     width: 100%;
   }
-  50%; {
-    width: 500%;
-  }
-  100%{
-    width: 1000%;
+  100% {
+    width: 700%;
   }
 }
 
@@ -202,17 +192,17 @@ h1 {
   width: 60%;
   position: absolute;
   transform: rotate(-0.25turn);
-  bottom: -10rem;
+  bottom: 0rem;
   left: 20%;
   filter: invert(50%);
+  padding: 25vw 25vw;
 }
 
 .bishop-div:hover {
-  background-image: url(media/pope.jpg);
+  background-image: url(media/pope-anime.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
-  background-color: white;
 }
 
 .knight {
@@ -229,14 +219,29 @@ h1 {
   0% {
     width: 100%;
   }
-  50% {
-    width: 20%;
-    margin-left: 40%;
-    margin-top: 40%;
-  }
   100% {
     width: 1%;
     margin-left: 49.5%;
     margin-top: 49.5%;
+  }
+}
+
+@media (max-width: 390px) {
+  html,
+  body,
+  * {
+    font-size: 55%;
+  }
+
+  .about-image-box {
+    width: 75vw;
+    height: 75vw;
+    margin-bottom: 5vh;
+  }
+  .about {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: fit-content;
   }
 }
