@@ -14,7 +14,7 @@ body {
 
 header {
   height: 20vh;
-  width: 50vw;
+  width: 100vw;
   margin: 3rem auto;
   font-size: 7rem;
   text-align: center;
@@ -119,7 +119,7 @@ h1 {
   }
 }
 
-.about {
+.gallery {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -128,7 +128,7 @@ h1 {
   height: 85vw;
 }
 
-.about-image-box {
+.gallery-image-box {
   border: 3px solid black;
   box-shadow: 2rem 2rem 2rem #1d6960;
   width: 26vw;
@@ -137,12 +137,12 @@ h1 {
   background-color: #fc7a57;
 }
 
-.about-image {
+.gallery-image {
   width: 100%;
   transition: all 0.3s;
 }
 
-.about-image:hover {
+.gallery-image:hover {
   width: 110%;
   position: absolute;
   transform: translate(-5%, -5%);
@@ -183,12 +183,12 @@ h1 {
   }
 }
 
-.bishop {
+.bishop-image {
   width: 100%;
   transition: all 0.5s;
 }
 
-.bishop:hover {
+.bishop-image:hover {
   width: 60%;
   position: absolute;
   transform: rotate(-0.25turn);
@@ -205,12 +205,12 @@ h1 {
   background-size: contain;
 }
 
-.knight {
+.knight-image {
   width: 100%;
   transition: all 0.5s;
 }
 
-.knight:hover {
+.knight-image:hover {
   filter: invert(50%);
   animation: knight 3s;
 }
@@ -226,6 +226,40 @@ h1 {
   }
 }
 
+@media (max-width: 1024px) {
+  html,
+  body,
+  * {
+    font-size: 60%;
+  }
+
+  .gallery-image-box {
+    width: 51vw;
+    height: 51vw;
+    margin-bottom: 5vh;
+  }
+}
+
+@media (max-width: 768px) {
+  html,
+  body,
+  * {
+    font-size: 60%;
+  }
+
+  .white-pawn {
+    animation: none;
+    height: 0vw;
+    width: 0vw;
+  }
+
+  .black-pawn {
+    animation: none;
+    height: 0vw;
+    width: 0vw;
+  }
+}
+
 @media (max-width: 390px) {
   html,
   body,
@@ -233,15 +267,25 @@ h1 {
     font-size: 55%;
   }
 
-  .about-image-box {
+  .white-pawn {
+    animation: none;
+    height: 0vw;
+    width: 0vw;
+  }
+
+  .black-pawn {
+    animation: none;
+    height: 0vw;
+    width: 0vw;
+  }
+
+  .gallery-image-box {
     width: 75vw;
     height: 75vw;
     margin-bottom: 5vh;
   }
-  .about {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    height: fit-content;
+
+  .startup-animation-text {
+    font-size: 4rem;
   }
 }
